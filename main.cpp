@@ -28,7 +28,7 @@ int main()
 
                 if( numItems <5 ){
 
-                        list[numItems] == item;
+                        list[numItems] = item;
                         numItems++;
                 }
                 else{
@@ -37,5 +37,11 @@ int main()
                 }
         }
         while(input != 'q' && input!= 'Q');
+        int num=1; 
+        int index;
+        for ( index=0; index <5; index++){
+                cout << num << " " << list[index] << endl;
+                num++;
+        }
         return 0;
 }
