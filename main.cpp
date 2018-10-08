@@ -1,10 +1,10 @@
 #include<iostream>
 #include<string>
 using namespace std;
-
+#include<vector>
 int main()
 {
-        string list[5]; //array of 5 strings
+       vector<string> list; //array of 5 strings
         int numItems = 0;
         string item;
         char input;
@@ -20,27 +20,23 @@ int main()
 
 
 
-                if(input == 'a'|| input == 'A'){
+                if (input == 'a'|| input =='A'){
 
                         cout<< "What is the item?"<<endl;
                         cin >> item;
-                
+               
 
-                if( numItems <5 ){
+                }
 
-                        list[numItems] = item;
+                        list.push_back(item);
                         numItems++;
                 }
-                else{
-                        cout << "You'll need a bigger list!"<<endl;
-                }
-                }
-        }
+        
         while(input != 'q' && input!= 'Q');
         int num=1; 
         int index;
         cout<<"==ITEMS TO BUY=="<<endl;
-        for ( index=0; index <5; index++){
+        for ( index=0; index <list.size(); index++){
                 
                 cout << num << " " << list[index] << endl;
                 num++;
