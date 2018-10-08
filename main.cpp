@@ -26,15 +26,17 @@ int main()
                         cin >> item;
                
 
-                }
+                
 
                         list.push_back(item);
-                        numItems++;
+                       
                 }
-        
-        while(input != 'q' && input!= 'Q');
+        }        while(input != 'q' && input!= 'Q');
         int num=1; 
         int index;
+        if (list.size()==0){
+                cout<< "No items to buy!"<<endl;
+        return 0;}
         cout<<"==ITEMS TO BUY=="<<endl;
         for ( index=0; index <list.size(); index++){
                 
